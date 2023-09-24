@@ -7,7 +7,7 @@ ransack_download() {
 
 cli_version() {
     # --version: Show version
-    echo "owncmd v1.0"
+    echo "Ransack - a simple and flexible package manager"
     exit
 }
 ransack_update() {
