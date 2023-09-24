@@ -1,7 +1,7 @@
 #https://stackoverflow.com/questions/71006250/how-to-make-version-custom-command-in-linux is the source
 ransack_download() {
     # --help: Shows help message
-   /sourcescript/$package
+   ./sourcescript/$1
 }
 
 cli_version() {
