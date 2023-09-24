@@ -1,0 +1,9 @@
+## here goes package details (up to you)
+# Pkg_name=foo
+# Pkg_ver=bar
+
+# add download dependency script here
+(dep scripts here please, in order ofc)
+
+# add download command and url here
+(command and url here please)
