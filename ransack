@@ -1,7 +1,8 @@
 #https://stackoverflow.com/questions/71006250/how-to-make-version-custom-command-in-linux and https://ryanstutorials.net/bash-scripting-tutorial/bash-variables.php are the sources
 ransack_download() {
-    # --help: Shows help message
+    # --install: installs a package using a download script
    ./sourcescript/$1
+    exit
 }
 
 cli_version() {
@@ -9,14 +10,23 @@ cli_version() {
     echo "owncmd v1.0"
     exit
 }
-
+ransack_update() {
+    # --update: update package scripts
+    rm -rf /sourcescript
+    mkdir  /sourcescript
+    wget (add script repo url here)
+    exit
+}
 # Argument
 case $1 in
-    "--install"|"-h")
-        cli_help
+    "--install"|"-i")
+        ransack_download
         ;;
     "--version"|"-V")
         cli_version
+        ;;
+    "--update"|"-u")
+        ransack_update
         ;;
 esac
 # Main program
