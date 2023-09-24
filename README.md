@@ -1,2 +1,2 @@
 # ransack
-simple package manager
+simple and flexible package manager
