@@ -1,0 +1,23 @@
+#https://stackoverflow.com/questions/71006250/how-to-make-version-custom-command-in-linux is the source
+ransack_download() {
+    # --help: Shows help message
+   /sourcescript/$package
+}
+
+cli_version() {
+    # --version: Show version
+    echo "owncmd v1.0"
+    exit
+}
+
+# Argument
+case $1 in
+    "--install"|"-h")
+        cli_help
+        ;;
+    "--version"|"-V")
+        cli_version
+        ;;
+esac
+# Main program
+echo "Heya custom commands"
