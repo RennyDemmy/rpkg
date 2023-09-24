@@ -15,7 +15,13 @@ ransack_update() {
     rm -rf /sourcescript
     mkdir  /sourcescript
     wget (add script repo url here)
+    chmod +777 /sourcescript
+    chmod +777 /sourcescript/*
     exit
+}
+ransack_uninstall() {
+    # --uninstall: remove package
+    ./sourcescript/$1-uninstall
 }
 # Argument
 case $1 in
@@ -27,6 +33,9 @@ case $1 in
         ;;
     "--update"|"-u")
         ransack_update
+        ;;
+    "--uninstall"|"-r")
+        ransack_uninstall
         ;;
 esac
 # Main program
