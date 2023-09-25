@@ -12,8 +12,8 @@ cli_version() {
 }
 ransack_update() {
     # --update: update package scripts
-    rm -rf /sourcescript
     mkdir  /sourcescript
+    cd /sourcescript
     wget (add script repo url here)
     chmod +777 /sourcescript
     chmod +777 /sourcescript/*
