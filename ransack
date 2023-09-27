@@ -1,6 +1,6 @@
 #https://stackoverflow.com/questions/71006250/how-to-make-version-custom-command-in-linux and https://ryanstutorials.net/bash-scripting-tutorial/bash-variables.php are the sources
 ransack_download() {
-    # --install: installs a package using a download script
+    # --install: installs a package using a download script (category/package, e.g. app-emulation/cemu)
    ./sourcescript/$1
     exit
 }
