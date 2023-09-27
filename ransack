@@ -17,6 +17,7 @@ ransack_update() {
     wget (add script repo url here)
     chmod +777 /sourcescript
     chmod +777 /sourcescript/*
+    print world.txt
     exit
 }
 ransack_uninstall() {
