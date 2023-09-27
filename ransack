@@ -16,8 +16,7 @@ ransack_update() {
     cd /sourcescript
     sudo wget https://github.com/RennyDemmy/ransack/tree/main/repo/update/update.txt #(add script repo url here)
     sudo wget -i update.txt
-    chmod +777 update
-    sudo sh ./update
+    sudo wget https://github.com/RennyDemmy/ransack/tree/main/repo/world.txt
     print world.txt
     exit
 }
