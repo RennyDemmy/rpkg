@@ -1,0 +1,3 @@
+Hello there!
+Thanks for using Ransack Package Manager!
+If you have any questions and/or contributions, please make use of the GitHub Repo of Ransack!
