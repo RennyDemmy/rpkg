@@ -14,7 +14,8 @@ ransack_update() {
     # --update: update package scripts
     sudo rm  /sourcescript/*
     cd /sourcescript
-    sudo wget https://github.com/RennyDemmy/ransack/tree/main/repo/update #(add script repo url here)
+    sudo wget https://github.com/RennyDemmy/ransack/tree/main/repo/update/update.txt #(add script repo url here)
+    sudo wget -i update.txt
     chmod +777 update
     sudo sh ./update
     print world.txt
