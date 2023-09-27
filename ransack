@@ -1,7 +1,7 @@
 #https://stackoverflow.com/questions/71006250/how-to-make-version-custom-command-in-linux and https://ryanstutorials.net/bash-scripting-tutorial/bash-variables.php are the sources
 ransack_download() {
     # --install: installs a package using a download script (category/package, e.g. app-emulation/cemu)
-   ./sourcescript/$1
+    sudo sh ./sourcescript/$1
     exit
 }
 
@@ -12,9 +12,9 @@ cli_version() {
 }
 ransack_update() {
     # --update: update package scripts
-    mkdir  /sourcescript
+    sudo rm  /sourcescript/*
     cd /sourcescript
-    wget https://github.com/RennyDemmy/ransack/tree/main/repo/update #(add script repo url here)
+    sudo wget https://github.com/RennyDemmy/ransack/tree/main/repo/update #(add script repo url here)
     chmod +777 update
     sudo sh ./update
     print world.txt
@@ -22,7 +22,7 @@ ransack_update() {
 }
 ransack_uninstall() {
     # --uninstall: remove package
-    ./sourcescript/$1-uninstall
+    sudo sh ./sourcescript/$1-uninstall
 }
 # Argument
 case $1 in
