@@ -24,6 +24,10 @@ ransack_uninstall() {
     # --uninstall: remove package
     sudo sh ./sourcescript/$1-uninstall
 }
+ransack_setup() {
+    # --setup: sets up the direectory needed
+    sudo mkdir /sourcescript
+}
 # Argument
 case $1 in
     "--install"|"-i")
@@ -37,6 +41,9 @@ case $1 in
         ;;
     "--uninstall"|"-r")
         ransack_uninstall
+        ;;
+    "--setup"|"-s")
+        ransack_setup
         ;;
 esac
 # Main program
