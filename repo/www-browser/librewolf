@@ -1,0 +1,17 @@
+## here goes package details (up to you)
+# Pkg_name= Mozilla Firefox
+# Pkg_ver=118.0.1-1
+
+# add download dependency script here
+
+# add download command and url here
+wget https://gitlab.com/librewolf-community/browser/source/-/archive/118.0.1-1/source-118.0.1-1.tar.gz
+# compilation
+tar xf source-118.0.1-1.tar.gz
+cd source-118.0.1-1
+./mach --no-interactive bootstrap --application-choice=browser
+./lw/setup-wasi-linux.sh
+./mach build
+./mach package
+# OR
+./mach run
