@@ -11,8 +11,8 @@ Ransack consists of a few arguments. These are;
 
 --uninstall/-r to remove a package (needs a {packagename}-uninstall script, so devs, please make one.)
 
---setup/-s to establish the /sourcescript directory (needed for downloading scripts using --update/-u argument)
+--setup/-s to establish the /sourcescript and /sourcescript/AppImages directories (needed for downloading scripts using --update/-u argument)
 
---update/-u is to update the scripts (supposedly) by cleaning the /sourcescript directory
+--update/-u is to update the scripts (supposedly) by cleaning the /sourcescript directory (make sure to backup your AppImages, since they'll be gone as well! BOOM! GONE!)
 
 --appimage/-a is to download an AppImage hosted on a repo (not AppImageHub).
