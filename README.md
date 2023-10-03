@@ -13,5 +13,5 @@ Ransack consists of a few arguments. These are;
 
 --setup/-s to establish the /sourcescript directory (needed for downloading scripts using --update/-u argument)
 
---update/-u is to update the scripts
+--update/-u is to update the scripts (supposedly) by cleaning the /sourcescript directory
 
