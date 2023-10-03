@@ -15,3 +15,4 @@ Ransack consists of a few arguments. These are;
 
 --update/-u is to update the scripts (supposedly) by cleaning the /sourcescript directory
 
+--appimage/-a is to download an AppImage hosted on a repo (not AppImageHub).
