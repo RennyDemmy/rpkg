@@ -28,6 +28,11 @@ ransack_setup() {
     # --setup: sets up the direectory needed
     sudo mkdir /sourcescript
 }
+ransack_appimage() {
+    # --appimage: downloads an AppImage.
+    sudo sh ./sourcescript/$1.AppImage
+    exit
+}
 # Argument
 case $1 in
     "--install"|"-i")
@@ -44,6 +49,9 @@ case $1 in
         ;;
     "--setup"|"-s")
         ransack_setup
+        ;;
+    "--appimage"|"-a")
+        ransack_appimage
         ;;
 esac
 # Main program
