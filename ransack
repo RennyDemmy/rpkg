@@ -14,6 +14,7 @@ ransack_update() {
     # --update: update package scripts
     sudo rm  /sourcescript/*
     cd /sourcescript
+    echo "Heya user! Ransack is updating the script directory!"
     sudo wget https://github.com/RennyDemmy/ransack/tree/main/repo/update/update.txt #(add script repo url here)
     sudo wget -i update.txt    # taken from: https://stackoverflow.com/questions/40986340/how-to-wget-a-list-of-urls-in-a-text-file
     sudo wget https://github.com/RennyDemmy/ransack/tree/main/repo/world.txt
