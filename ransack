@@ -36,6 +36,11 @@ ransack_appimage() {
     chmod a+x /sourcescript/AppImages/$1.AppImage
     exit
 }
+ransack_flatpak() {
+    # --flatpak: downloads and installs a Flatpak package. #some parts learned from https://appimage.org/
+    sudo sh ./sourcescript/$1-flatpak
+    exit
+}
 # Argument
 case $1 in
     "--install"|"-i")
@@ -55,6 +60,9 @@ case $1 in
         ;;
     "--appimage"|"-a")
         ransack_appimage
+        ;;
+    "--flatpak"|"-F")
+        ransack_flatpak
         ;;
 esac
 # Main program
