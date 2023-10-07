@@ -1,0 +1,3 @@
+#!/bin/sh
+#the command is pretty much just sudo flatpak install {repo name} {package name}, like the Lutris example below.
+sudo flatpak install flathub net.lutris.Lutris
