@@ -38,7 +38,7 @@ ransack_appimage() {
 }
 ransack_flatpak() {
     # --flatpak: downloads and installs a Flatpak package. #some parts learned from https://appimage.org/
-    sudo sh ./sourcescript/$1-flatpak
+    sudo sh ./sourcescript/flatpaks/$1-flatpak
     exit
 }
 # Argument
