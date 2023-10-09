@@ -34,6 +34,9 @@ ransack_appimage() {
     # --appimage: downloads an AppImage.
     sudo sh ./sourcescript/$1-AppImage #some parts learned from https://appimage.org/
     chmod a+x /sourcescript/AppImages/$1.AppImage
+    echo /sourcescript/AppImages/$1.AppImage >> $1
+    chmod a+x $1
+    cp $1 >> /bin
     exit
 }
 ransack_flatpak() {
