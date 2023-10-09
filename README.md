@@ -22,3 +22,7 @@ Ransack consists of a few arguments. These are;
 # Great! Now I know how to use it, how can I make packages for ransack?
 
 It's great that you've asked this question. You can make packages using the "example" file, which is an example file on how to make a package. It also shows a guideline to create a package.
+
+# Dependencies
+- wget
+- AppImageCrafters/appimage-cli-tool
