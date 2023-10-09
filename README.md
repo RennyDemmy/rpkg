@@ -25,4 +25,4 @@ It's great that you've asked this question. You can make packages using the "exa
 
 # Dependencies
 - wget
-- <a href="https://github.com/AppImageCrafters/appimage-cli-tool"> AppImage CLI Tool </a>
+- <a href="https://github.com/AppImageCrafters/appimage-cli-tool"> AppImage CLI Tool (only for installing AppImages)</a>
