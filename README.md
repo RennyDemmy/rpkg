@@ -14,7 +14,7 @@ Ransack consists of a few arguments. These are;
 
 --setup/-s to establish the /sourcescript and /sourcescript/AppImages directories (needed for downloading scripts using --update/-u argument)
 
---update/-u is to update the scripts (supposedly) by moving the files from /sourcescript directory to /sourcescript/old (make sure to backup your AppImages, since they'll be gone as well! BOOM! GONE!)
+--update/-u is to update the scripts (supposedly) by moving the files from /sourcescript directory to /sourcescript/old (make sure to backup your AppImages, since they'll be moved to the following directory as well! BOOM! GONE!)
 
 --appimage/-a is to download an AppImage hosted on a website (not AppImageHub).
 
