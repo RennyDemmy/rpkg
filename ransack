@@ -28,14 +28,14 @@ ransack_uninstall() {
 ransack_setup() {
     # --setup: sets up the direectory needed
     sudo mkdir /sourcescript
-    sudo mkdir /sourcescript/AppImages
+    sudo mkdir /AppImages
 }
 ransack_appimage() {
     # --appimage: downloads an AppImage.
     sudo sh ./sourcescript/$1-AppImage #some parts learned from https://appimage.org/
-    chmod a+x /sourcescript/AppImages/$1.AppImage
-    sudo appimage-cli-tool install /sourcescript/AppImages/$1.AppImage
-    sudo echo "alias /sourcescript/AppImages/$1.AppImage = $1" >> /etc/bashrc
+    chmod a+x /AppImages/$1.AppImage
+    sudo appimage-cli-tool install /AppImages/$1.AppImage
+    sudo echo "alias /AppImages/$1.AppImage = $1" >> /etc/bashrc
     exit
 }
 ransack_flatpak() {
