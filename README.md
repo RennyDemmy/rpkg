@@ -26,3 +26,6 @@ It's great that you've asked this question. You can make packages using the "tem
 # Dependencies
 - wget
 - <a href="https://github.com/AppImageCrafters/appimage-cli-tool"> AppImage CLI Tool (only for installing AppImages)</a>
+
+# Future
+- Add binary support
