@@ -12,7 +12,7 @@ cli_version() {
 }
 ransack_update() {
     # --update: update package scripts
-    sudo rm  /sourcescript/*
+    sudo cp /sourcescript/* /sourcescript/old
     cd /sourcescript
     echo "Heya user! Ransack is updating the script directory!"
     sudo wget https://github.com/RennyDemmy/ransack/tree/main/repo/update/update.txt #(add script repo url here)
