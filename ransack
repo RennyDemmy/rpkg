@@ -29,6 +29,7 @@ ransack_setup() {
     # --setup: sets up the direectory needed
     sudo mkdir /sourcescript
     sudo mkdir /AppImages
+    sudo mkdir /sourcescript/binaryscript
 }
 ransack_appimage() {
     # --appimage: downloads an AppImage.
