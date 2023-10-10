@@ -1,0 +1,2 @@
+https://github.com/RennyDemmy/ransack/new/main/repo/flatpaks/lutris-flatpak
+https://github.com/RennyDemmy/ransack/new/main/repo/appimages/thorium-appimage
