@@ -1,2 +1,3 @@
+#!/bin/sh
 # script to download appimage file is added below this line (this line does nothing btw, but can be used to separate/cleanup/organize the code in the script, and Thorium Browser is used as an example here)
 wget https://github.com/Alex313031/thorium/releases/download/M117.0.5938.157/Thorium_Browser_117.0.5938.157_x64.AppImage
