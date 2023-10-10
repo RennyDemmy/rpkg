@@ -15,7 +15,7 @@ Ransack consists of a few arguments. These are;
 
 --update/-u is to update the scripts (supposedly) by cleaning the /sourcescript directory (make sure to backup your AppImages, since they'll be gone as well! BOOM! GONE!)
 
---appimage/-a is to download an AppImage hosted on a repo (not AppImageHub).
+--appimage/-a is to download an AppImage hosted on a website (not AppImageHub).
 
 --flatpak/-F is to download a Flatpak package.
 
