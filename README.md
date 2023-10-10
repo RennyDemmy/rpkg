@@ -1,3 +1,4 @@
+# WARNING: IT'S NOT AFFILIATED WITH ANY OTHER PROJECT THAT IS NAMED RANSACK!
 # ransack
 A simple and flexible package manager
 
