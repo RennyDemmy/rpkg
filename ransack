@@ -46,7 +46,7 @@ ransack_flatpak() {
     exit
 }
 ransack_source_download() {
-    # --source-install: installs a package using a download script (category/package, e.g. app-emulation/cemu)
+    # --source-install: installs a package using a download script (category/package, e.g. app-emulation/cemu), but the package is compiled on your machine instead of using a binary
     sudo sh ./sourcescript/$1
     exit
 }
