@@ -20,6 +20,8 @@ Ransack consists of a few arguments. These are;
 
 --flatpak/-F is to download a Flatpak package.
 
+--source-install: installs a package using a download script (category/package, e.g. app-emulation/cemu), but the package is compiled on your machine instead of using a binary.
+
 # Great! Now I know how to use it, how can I make packages for ransack?
 
 It's great that you've asked this question. You can make packages using the "template" file, which is an example file on how to make a package. It also shows a guideline to create a package. Or alternatively, you can use "example-flatpak" and "example-appimage" files to download packages that are using those package formats.
