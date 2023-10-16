@@ -1,7 +1,7 @@
 #https://stackoverflow.com/questions/71006250/how-to-make-version-custom-command-in-linux and https://ryanstutorials.net/bash-scripting-tutorial/bash-variables.php are the sources
 ransack_download() {
     # --install: installs a package using a download script (category/package, e.g. app-emulation/cemu)
-    sudo sh ./sourcescript/$1
+    sudo sh ./binaryscript/$1
     exit
 }
 
@@ -44,10 +44,18 @@ ransack_flatpak() {
     sudo sh ./sourcescript/flatpaks/$1-flatpak
     exit
 }
+ransack_source_download() {
+    # --source-install: installs a package using a download script (category/package, e.g. app-emulation/cemu)
+    sudo sh ./sourcescript/$1
+    exit
+}
 # Argument
 case $1 in
     "--install"|"-i")
         ransack_download
+        ;;
+    "--source-install"|"-S")
+        ransack_source_download
         ;;
     "--version"|"-V")
         cli_version
