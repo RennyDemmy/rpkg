@@ -34,3 +34,4 @@ It's great that you've asked this question. You can make packages using the "tem
 - Add binary support
 - replace wget with wget2 or aria2c
 - Develop a GUI tool (not needing to be linked with ransack package manager)
+- Add support for custom repos
