@@ -1,8 +1,8 @@
 #https://stackoverflow.com/questions/71006250/how-to-make-version-custom-command-in-linux and https://ryanstutorials.net/bash-scripting-tutorial/bash-variables.php are the sources
-
+output=$1
 ransack_download() {
     # --install: installs a package using a download script (category/package, e.g. app-emulation/cemu)
-    cd /binaryscript && sudo sh ./$@
+    cd /binaryscript && sudo sh ./${output}
     exit
 }
 
@@ -25,7 +25,7 @@ ransack_update() {
 }
 ransack_uninstall() {
     # --uninstall: remove package
-    sudo sh ./sourcescript/$@-uninstall
+    sudo sh ./sourcescript/${output}-uninstall
 }
 ransack_setup() {
     # --setup: sets up the direectory needed
@@ -34,8 +34,7 @@ ransack_setup() {
 }
 ransack_source_download() {
     # --source-install: installs a package using a download script (category/package, e.g. app-emulation/cemu), but the package is compiled on your machine instead of using a binary
-    cd /sourcescript && sudo sh ./$@
-    exit
+    cd /sourcescript && sudo sh ./${output}
 }
 # Argument
 case $1 in
