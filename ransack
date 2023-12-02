@@ -1,7 +1,8 @@
 #https://stackoverflow.com/questions/71006250/how-to-make-version-custom-command-in-linux and https://ryanstutorials.net/bash-scripting-tutorial/bash-variables.php are the sources
+
 ransack_download() {
     # --install: installs a package using a download script (category/package, e.g. app-emulation/cemu)
-    cd /binaryscript && sudo sh ./$1
+    cd /binaryscript && sudo sh ./$@
     exit
 }
 
@@ -24,30 +25,16 @@ ransack_update() {
 }
 ransack_uninstall() {
     # --uninstall: remove package
-    sudo sh ./sourcescript/$1-uninstall
+    sudo sh ./sourcescript/$@-uninstall
 }
 ransack_setup() {
     # --setup: sets up the direectory needed
     sudo mkdir /sourcescript
-    sudo mkdir /AppImages
     sudo mkdir /sourcescript/binaryscript
-}
-ransack_appimage() {
-    # --appimage: downloads an AppImage.
-    sudo sh ./sourcescript/$1-AppImage #some parts learned from https://appimage.org/
-    chmod a+x /AppImages/$1.AppImage
-    sudo appimage-cli-tool install /AppImages/$1.AppImage
-    sudo echo "alias /AppImages/$1.AppImage = $1" >> /etc/bashrc
-    exit
-}
-ransack_flatpak() {
-    # --flatpak: downloads and installs a Flatpak package. #some parts learned from https://appimage.org/
-    sudo sh ./sourcescript/flatpaks/$1-flatpak
-    exit
 }
 ransack_source_download() {
     # --source-install: installs a package using a download script (category/package, e.g. app-emulation/cemu), but the package is compiled on your machine instead of using a binary
-    cd /sourcescript && sudo sh ./$1
+    cd /sourcescript && sudo sh ./$@
     exit
 }
 # Argument
