@@ -1,6 +1,6 @@
 #https://stackoverflow.com/questions/71006250/how-to-make-version-custom-command-in-linux and https://ryanstutorials.net/bash-scripting-tutorial/bash-variables.php are the sources
 output=$1
-ransack_download() {
+rpkg_download() {
     # --install: installs a package using a download script (category/package, e.g. app-emulation/cemu)
     cd /binaryscript && sudo sh ./${output}
     exit
@@ -8,59 +8,59 @@ ransack_download() {
 
 cli_version() {
     # --version: Show version
-    echo "Ransack - a simple and flexible package manager"
+    echo "rpkg - a simple and flexible package manager"
     exit
 }
-ransack_update() {
+rpkg_update() {
     # --update: update package scripts
     sudo cp /binaryscript/* /binaryscript/old
     sudo cp /sourcescript/* /sourcescript/old
     cd /sourcescript
-    echo "Heya user! Ransack is updating the script directory!"
-    sudo wget https://github.com/RennyDemmy/ransack/tree/main/repo/update/update.txt #(add script repo url here)
+    echo "Heya user! rpkg is updating the script directory!"
+    sudo wget https://github.com/RennyDemmy/rpkg/tree/main/repo/update/update.txt #(add script repo url here)
     sudo wget -i update.txt    # taken from: https://stackoverflow.com/questions/40986340/how-to-wget-a-list-of-urls-in-a-text-file
-    sudo wget https://github.com/RennyDemmy/ransack/tree/main/repo/world.txt
+    sudo wget https://github.com/RennyDemmy/rpkg/tree/main/repo/world.txt
     print world.txt
     exit
 }
-ransack_uninstall() {
+rpkg_uninstall() {
     # --uninstall: remove package
     sudo sh ./sourcescript/${output}-uninstall
 }
-ransack_setup() {
+rpkg_setup() {
     # --setup: sets up the direectory needed
     sudo mkdir /sourcescript
     sudo mkdir /sourcescript/binaryscript
 }
-ransack_source_download() {
+rpkg_source_download() {
     # --source-install: installs a package using a download script (category/package, e.g. app-emulation/cemu), but the package is compiled on your machine instead of using a binary
     cd /sourcescript && sudo sh ./${output}
 }
 # Argument
 case $1 in
     "--install"|"-i")
-        ransack_download
+        rpkg_download
         ;;
     "--source-install"|"-S")
-        ransack_source_download
+        rpkg_source_download
         ;;
     "--version"|"-V")
         cli_version
         ;;
     "--update"|"-u")
-        ransack_update
+        rpkg_update
         ;;
     "--uninstall"|"-r")
-        ransack_uninstall
+        rpkg_uninstall
         ;;
     "--setup"|"-s")
-        ransack_setup
+        rpkg_setup
         ;;
     "--appimage"|"-a")
-        ransack_appimage
+        rpkg_appimage
         ;;
     "--flatpak"|"-F")
-        ransack_flatpak
+        rpkg_flatpak
         ;;
 esac
 # Main program
