@@ -5,8 +5,8 @@ A simple and flexible package manager
 # What is rpkg?
 rpkg is both a binary-based and a source-based package management system that is suitable for anyone, especially those who're building their own distribution, or just want a package management system whose packages could be hosted anywhere easily. It's so easy that one would only need a simple online directory, or even a GitHub repository.
 
-# How to use ransack?
-Ransack consists of a few arguments. These are;
+# How to use rpkg?
+rpkg consists of a few arguments. These are;
 
 --install/-i to install a package (it triggers the {packagename} script)
 
@@ -22,7 +22,7 @@ Ransack consists of a few arguments. These are;
 
 --source-install: installs a package using a download script (category/package, e.g. app-emulation/cemu), but the package is compiled on your machine instead of using a binary.
 
-# Great! Now I know how to use it, how can I make packages for ransack?
+# Great! Now I know how to use it, how can I make packages for rpkg?
 
 It's great that you've asked this question. You can make packages using the "template" file, which is an example file on how to make a package. It also shows a guideline to create a package. Or alternatively, you can use "example-flatpak" and "example-appimage" files to download packages that are using those package formats.
 
@@ -33,5 +33,5 @@ It's great that you've asked this question. You can make packages using the "tem
 # Future
 - Add binary support
 - replace wget with wget2 or aria2c
-- Develop a GUI tool (not needing to be linked with ransack package manager)
+- Develop a GUI tool (not needing to be linked with rpkg package manager)
 - Add support for custom repos
